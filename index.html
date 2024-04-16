@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Number Product Calculator</h1><br><br><br>
+  
+  <input type="number" id="numberInput1" placeholder="Enter First Number">
+  <input type="number" id="numberInput2" placeholder="Enter Second Number">
+  <button onclick="calculateNumber()">Calculate</button>
+  
+  <p id="result"></p>
+  <script>
+    function calculateNumber() {
+      var number = document.getElementById('numberInput1').value;
+      var percentage = document.getElementById('numberInput2').value;
+      
+      if (number === '' || number === '' || isNaN(number) || isNaN(number)) {
+        document.getElementById('result').innerText = "Please enter valid numbers.";
+      } else {
+        number = Number(number);
+        percentage = Number(number);
+        
+        var result = (number * number);
+        document.getElementById('result').innerText = "The result is: " + result;
+      }
+    }
+  </script>
+  
+</body>
+</html>
